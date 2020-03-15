@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Ootori&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 17 Nov 2018 23:36:18 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 21:48:02 +0900</lastBuildDate>
     
 	<atom:link href="https://ootori008.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>感想：The Art of Code</title>
+      <link>https://ootori008.github.io/posts/20191222_theartofcode/</link>
+      <pubDate>Sun, 15 Mar 2020 21:48:02 +0900</pubDate>
+      
+      <guid>https://ootori008.github.io/posts/20191222_theartofcode/</guid>
+      <description>Youtubeで興味深いプレゼンテーションを見た。 コード・プログラムでも芸術になる。そしてそれの歴史を紹介したプレイステーションである。内容</description>
+    </item>
     
     <item>
       <title>NoIPで無料のドメインを取得する</title>
