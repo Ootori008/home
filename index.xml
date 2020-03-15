@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ootori&#39;s Home</title>
+    <link>https://ootori008.github.io/</link>
+    <description>Recent content on Ootori&#39;s Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 17 Nov 2018 23:36:18 +0900</lastBuildDate>
+    
+	<atom:link href="https://ootori008.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NoIPで無料のドメインを取得する</title>
+      <link>https://ootori008.github.io/posts/20181117_noip/</link>
+      <pubDate>Sat, 17 Nov 2018 23:36:18 +0900</pubDate>
+      
+      <guid>https://ootori008.github.io/posts/20181117_noip/</guid>
+      <description>(2020.03.15に更新) NoIPで無料のドメインを取得する ラズパイのホームサーバーを作ってVPNを構築したが、独自のドメインがないため</description>
+    </item>
+    
+    <item>
+      <title>初めての沖縄</title>
+      <link>https://ootori008.github.io/posts/20171009_okinawa/</link>
+      <pubDate>Mon, 09 Oct 2017 22:33:33 +0900</pubDate>
+      
+      <guid>https://ootori008.github.io/posts/20171009_okinawa/</guid>
+      <description>(2020.03.15に更新) 初めての沖縄旅行。 旅行を提供頂いたKTさんに感謝する。 行きの飛行機で取った写真である。 いよいよ陸が見えてきた。</description>
+    </item>
+    
+  </channel>
+</rss>

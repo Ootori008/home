@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja-jp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NoIPで無料のドメインを取得する - Ootori&#39;s Home</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Ootori&#39;s Home" rel="home">
+				<div class="logo__title">Ootori&#39;s Home</div>
+				<div class="logo__tagline">Ootori のホームページへようこそ(&#43;_&#43;)</div>
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">NoIPで無料のドメインを取得する</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-11-17T23:36:18&#43;09:00">November 17, 2018</time>
+</div>
+</div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#noipで無料のドメインを取得する">NoIPで無料のドメインを取得する</a></li>
+    <li><a href="#ipアドレスの自動更新">IPアドレスの自動更新</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>(2020.03.15に更新)</p>
+<h2 id="noipで無料のドメインを取得する">NoIPで無料のドメインを取得する</h2>
+<p>ラズパイのホームサーバーを作ってVPNを構築したが、独自のドメインがないため、毎回自宅のIPアドレスを直接叩いている。</p>
+<p>自宅の回線はかなり安定で、自分でルータを再起動しない限り、1か月も同じIPで持つのがよくある。</p>
+<p>しかしそれでも運悪くちょうど使いたいときにIPアドレスが変わったような事故が発生する可能性があるため、ドメインを申請することにした。</p>
+<p>最低でも年間数千円かかる有料ドメインは趣味としては少し高い気がするので、無料のドメインを探した。</p>
+<p>そこでいろいろよさそうなNoIPを選んだ。</p>
+<p><a href="https://www.noip.com/">https://www.noip.com/</a></p>
+<p>アカウントを申し込んだあと、この画面でホスト名を作成する。</p>
+<p><img src="/img/posts/20181117/0001.png" alt="Create a Hostname"></p>
+<p>現在使っているPCの外部IPアドレスがそのまま記入されているため、便利だ。</p>
+<p>こんなに簡単にドメインを入手できるのかと思うかもしれないが、実はここには仕掛けがある。</p>
+<p>申請したドメインは30日ごとに更新しなければならない。更新しないとドメインが消され、他の人に取られてしまう可能性がある(試したことがないけど)。</p>
+<p>更新期限が近づいてら、このようなメールがもらえる。</p>
+<p><img src="/img/posts/20181117/0002.png" alt="Create a Hostname"></p>
+<p>いかにも怪しいメールの感じがする。ここをクリックして、開いたページにさらに２，３回クリックしたら、更新できる。慣れると数秒でできる。またスマホでも操作できるため、いつもメールが来たら、そのままスマホで更新するようにしている。</p>
+<h2 id="ipアドレスの自動更新">IPアドレスの自動更新</h2>
+<p>NoIP公式のIPアドレス更新ツールを使う。</p>
+<p><a href="http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client-on-ubuntu/">How to Install the Linux Dynamic Update Client on Ubuntu</a></p>
+<p>GitHubにも手順書がある。こっちのほうがやりやすい。</p>
+<p><a href="https://github.com/jeroendoggen/scripts-tools-misc/tree/master/noip2">README</a></p>
+<p>念のためここで保存する。</p>
+<pre><code class="language-code" data-lang="code">oip2: Debian &amp; systemd
+Updating your public IP dynamically with www.noip.com on Debian 8+
+Register a free domain at www.noip.com
+http://www.noip.com
+Install noip2 from source
+http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client-on-ubuntu/
+	• cd /usr/local/src/
+	• wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+	• tar xf noip-duc-linux.tar.gz
+	• cd noip-2.1.9-1/
+	• make install (this asks your username + password
+Create a Systemd service
+https://bbs.archlinux.org/viewtopic.php?id=146167
+Create the file /etc/systemd/system/noip2.service
+[Unit]
+Description=No-IP Dynamic DNS Update Client
+After=network.target
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/noip2
+[Install]
+WantedBy=multi-user.target
+Testing:
+	• systemctl status noip2.service
+	• systemctl start noip2.service (start immediately)
+	• systemctl enable noip2.service (start at boot time)
+
+From &lt;https://github.com/jeroendoggen/scripts-tools-misc/tree/master/noip2&gt; 
+</code></pre><p>下が自宅サーバーでsystemctl statusした出力である。同じ表示が出たら、正常に動作していると思う。</p>
+<p><img src="/img/posts/20181117/0003.png" alt="Create a Hostname"></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/server/" rel="tag">server</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ootori avatar" src="/img/others/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ootori</span>
+	</div>
+	<div class="authorbox__description">
+		とある好奇心旺盛な自称技術者
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/20171009_okinawa/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">初めての沖縄</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ootori.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

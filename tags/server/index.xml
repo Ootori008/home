@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on Ootori&#39;s Home</title>
+    <link>https://ootori008.github.io/tags/server/</link>
+    <description>Recent content in server on Ootori&#39;s Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 17 Nov 2018 23:36:18 +0900</lastBuildDate>
+    
+	<atom:link href="https://ootori008.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NoIPで無料のドメインを取得する</title>
+      <link>https://ootori008.github.io/posts/20181117_noip/</link>
+      <pubDate>Sat, 17 Nov 2018 23:36:18 +0900</pubDate>
+      
+      <guid>https://ootori008.github.io/posts/20181117_noip/</guid>
+      <description>(2020.03.15に更新) NoIPで無料のドメインを取得する ラズパイのホームサーバーを作ってVPNを構築したが、独自のドメインがないため</description>
+    </item>
+    
+  </channel>
+</rss>
